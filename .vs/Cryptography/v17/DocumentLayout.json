@@ -3,12 +3,28 @@
   "WorkspaceRootPath": "D:\\DAI HOC\\An to\u00E0n b\u1EA3o m\u1EADt th\u00F4ng tin\\Demo\\Cryptography\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FD082A36-6479-4B66-A407-EA4D60C9EE29}|Cryptography\\Cryptography.csproj|d:\\dai hoc\\an to\u00E0n b\u1EA3o m\u1EADt th\u00F4ng tin\\demo\\cryptography\\cryptography\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{FD082A36-6479-4B66-A407-EA4D60C9EE29}|Cryptography\\Cryptography.csproj|solutionrelative:cryptography\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
+      "AbsoluteMoniker": "D:0:0:{FD082A36-6479-4B66-A407-EA4D60C9EE29}|Cryptography\\Cryptography.csproj|d:\\dai hoc\\an to\u00E0n b\u1EA3o m\u1EADt th\u00F4ng tin\\demo\\cryptography\\cryptography\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{FD082A36-6479-4B66-A407-EA4D60C9EE29}|Cryptography\\Cryptography.csproj|solutionrelative:cryptography\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FD082A36-6479-4B66-A407-EA4D60C9EE29}|Cryptography\\Cryptography.csproj|d:\\dai hoc\\an to\u00E0n b\u1EA3o m\u1EADt th\u00F4ng tin\\demo\\cryptography\\cryptography\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FD082A36-6479-4B66-A407-EA4D60C9EE29}|Cryptography\\Cryptography.csproj|solutionrelative:cryptography\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FD082A36-6479-4B66-A407-EA4D60C9EE29}|Cryptography\\Cryptography.csproj|d:\\dai hoc\\an to\u00E0n b\u1EA3o m\u1EADt th\u00F4ng tin\\demo\\cryptography\\cryptography\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{FD082A36-6479-4B66-A407-EA4D60C9EE29}|Cryptography\\Cryptography.csproj|solutionrelative:cryptography\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FD082A36-6479-4B66-A407-EA4D60C9EE29}|Cryptography\\Cryptography.csproj|d:\\dai hoc\\an to\u00E0n b\u1EA3o m\u1EADt th\u00F4ng tin\\demo\\cryptography\\cryptography\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FD082A36-6479-4B66-A407-EA4D60C9EE29}|Cryptography\\Cryptography.csproj|solutionrelative:cryptography\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FD082A36-6479-4B66-A407-EA4D60C9EE29}|Cryptography\\Cryptography.csproj|d:\\dai hoc\\an to\u00E0n b\u1EA3o m\u1EADt th\u00F4ng tin\\demo\\cryptography\\cryptography\\controllers\\classicalcipherscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FD082A36-6479-4B66-A407-EA4D60C9EE29}|Cryptography\\Cryptography.csproj|solutionrelative:cryptography\\controllers\\classicalcipherscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FD082A36-6479-4B66-A407-EA4D60C9EE29}|Cryptography\\Cryptography.csproj|d:\\dai hoc\\an to\u00E0n b\u1EA3o m\u1EADt th\u00F4ng tin\\demo\\cryptography\\cryptography\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{FD082A36-6479-4B66-A407-EA4D60C9EE29}|Cryptography\\Cryptography.csproj|solutionrelative:cryptography\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,21 +34,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 11,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": ".gitignore",
-              "DocumentMoniker": "D:\\DAI HOC\\An to\u00E0n b\u1EA3o m\u1EADt th\u00F4ng tin\\Demo\\Cryptography\\Cryptography\\.gitignore",
-              "RelativeDocumentMoniker": "Cryptography\\.gitignore",
-              "ToolTip": "D:\\DAI HOC\\An to\u00E0n b\u1EA3o m\u1EADt th\u00F4ng tin\\Demo\\Cryptography\\Cryptography\\.gitignore",
-              "RelativeToolTip": "Cryptography\\.gitignore",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-04-15T10:56:59.924Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:130:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
@@ -68,12 +71,77 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\DAI HOC\\An to\u00E0n b\u1EA3o m\u1EADt th\u00F4ng tin\\Demo\\Cryptography\\Cryptography\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Cryptography\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\DAI HOC\\An to\u00E0n b\u1EA3o m\u1EADt th\u00F4ng tin\\Demo\\Cryptography\\Cryptography\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Cryptography\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAB8AAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-15T13:01:01.26Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "D:\\DAI HOC\\An to\u00E0n b\u1EA3o m\u1EADt th\u00F4ng tin\\Demo\\Cryptography\\Cryptography\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Cryptography\\Controllers\\HomeController.cs",
+              "ToolTip": "D:\\DAI HOC\\An to\u00E0n b\u1EA3o m\u1EADt th\u00F4ng tin\\Demo\\Cryptography\\Cryptography\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Cryptography\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-15T12:55:46.453Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ClassicalCiphersController.cs",
+              "DocumentMoniker": "D:\\DAI HOC\\An to\u00E0n b\u1EA3o m\u1EADt th\u00F4ng tin\\Demo\\Cryptography\\Cryptography\\Controllers\\ClassicalCiphersController.cs",
+              "RelativeDocumentMoniker": "Cryptography\\Controllers\\ClassicalCiphersController.cs",
+              "ToolTip": "D:\\DAI HOC\\An to\u00E0n b\u1EA3o m\u1EADt th\u00F4ng tin\\Demo\\Cryptography\\Cryptography\\Controllers\\ClassicalCiphersController.cs",
+              "RelativeToolTip": "Cryptography\\Controllers\\ClassicalCiphersController.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAowD8AAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-15T12:55:45.662Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "site.css",
+              "DocumentMoniker": "D:\\DAI HOC\\An to\u00E0n b\u1EA3o m\u1EADt th\u00F4ng tin\\Demo\\Cryptography\\Cryptography\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "Cryptography\\wwwroot\\css\\site.css",
+              "ToolTip": "D:\\DAI HOC\\An to\u00E0n b\u1EA3o m\u1EADt th\u00F4ng tin\\Demo\\Cryptography\\Cryptography\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "Cryptography\\wwwroot\\css\\site.css",
+              "ViewState": "AgIAABQAAAAAAAAAAAAuwC8AAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-04-15T12:55:37.331Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "site.js",
+              "DocumentMoniker": "D:\\DAI HOC\\An to\u00E0n b\u1EA3o m\u1EADt th\u00F4ng tin\\Demo\\Cryptography\\Cryptography\\wwwroot\\js\\site.js",
+              "RelativeDocumentMoniker": "Cryptography\\wwwroot\\js\\site.js",
+              "ToolTip": "D:\\DAI HOC\\An to\u00E0n b\u1EA3o m\u1EADt th\u00F4ng tin\\Demo\\Cryptography\\Cryptography\\wwwroot\\js\\site.js",
+              "RelativeToolTip": "Cryptography\\wwwroot\\js\\site.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-04-15T12:55:28.055Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Index.cshtml",
               "DocumentMoniker": "D:\\DAI HOC\\An to\u00E0n b\u1EA3o m\u1EADt th\u00F4ng tin\\Demo\\Cryptography\\Cryptography\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "Cryptography\\Views\\Home\\Index.cshtml",
               "ToolTip": "D:\\DAI HOC\\An to\u00E0n b\u1EA3o m\u1EADt th\u00F4ng tin\\Demo\\Cryptography\\Cryptography\\Views\\Home\\Index.cshtml",
               "RelativeToolTip": "Cryptography\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAdAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-04-15T10:37:04.948Z",
               "EditorCaption": ""

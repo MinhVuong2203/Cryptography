@@ -5,16 +5,30 @@
 <section class="hero-panel reveal-on-scroll">
     <div class="row g-4 align-items-center">
         <div class="col-lg-8">
-            <p class="eyebrow mb-2">NỀN TẢNG DEMO</p>
+            <p class="eyebrow mb-2">TRANG DEMO UY TÍN</p>
             <h1 class="display-4 fw-bold mb-3">Khởi động bộ demo Cryptography</h1>
             <p class="lead mb-4">Trình diễn các thuật toán mật mã từ cổ điển đến hiện đại. Bản demo hiện tại đã sẵn sàng
                 cho nhóm mật mã cổ điển với UI trực quan và phản hồi nhanh.</p>
-                <a asp-controller="ClassicalCiphers" asp-action="Index" class="btn btn-accent btn-lg">Bắt đầu với mật mã cổ
-                    điển</a>
+            <div class="gate-links">
+                <a asp-controller="ClassicalCiphers" asp-action="Index" class="gate-link" data-gate="classic" aria-label="Mở cánh cổng cổ điển">
+                    <span class="gate-door gate-door-left"></span>
+                    <span class="gate-door gate-door-right"></span>
+                    <span class="gate-knob gate-knob-left"></span>
+                    <span class="gate-knob gate-knob-right"></span>
+                    <span class="gate-title">Cánh cổng cổ điển</span>
+                </a>
+                <a asp-controller="Home" asp-action="Privacy" class="gate-link" data-gate="modern" aria-label="Mở cánh cổng hiện đại">
+                    <span class="gate-door gate-door-left"></span>
+                    <span class="gate-door gate-door-right"></span>
+                    <span class="gate-knob gate-knob-left"></span>
+                    <span class="gate-knob gate-knob-right"></span>
+                    <span class="gate-title">Cánh cổng hiện đại</span>
+                </a>
+            </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="glass-card">
-                        <h2 class="h5 mb-3">Nội dung đã có</h2>
+                        <h2 class="h5 mb-3">Nội dung demo</h2>
                         <ul class="list-unstyled mb-0 d-grid gap-2">
                             <li>Caesar Cipher</li>
                             <li>Vigenere Cipher</li>
