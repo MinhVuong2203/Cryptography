@@ -1,0 +1,108 @@
+@model Cryptography.Models.ClassicalCipherViewModel
+@{
+    ViewData["Title"] = "Mật mã cổ điển";
+}
+
+<section class="hero-panel mb-4 reveal-on-scroll">
+    <div class="row align-items-center g-4">
+        <div class="col-lg-7">
+            <p class="eyebrow mb-2">PHÒNG THÍ NGHIỆM MẬT MÃ</p>
+            <h1 class="display-5 fw-bold mb-3">Demo Mật mã cổ điển</h1>
+            <p class="lead mb-0">Thử nghiệm Caesar, Vigenere và Atbash theo thời gian thực. Chọn thuật toán, nhập dữ
+                liệu, xem kết quả ngay.</p>
+            </div>
+            <div class="col-lg-5">
+                <div class="stats-card">
+                    <div class="stats-item">
+                        <span>3</span>
+                        <small>Cổ điển</small>
+                    </div>
+                    <div class="stats-item">
+                        <span>2</span>
+                        <small>Chế độ</small>
+                    </div>
+                    <div class="stats-item">
+                        <span>100%</span>
+                        <small>Trải nghiệm</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="row g-4">
+        <div class="col-xl-7 reveal-on-scroll">
+            <div class="glass-card h-100">
+                <h2 class="h4 mb-3">Bộ điều khiển mã hóa</h2>
+
+                <form asp-action="Index" method="post" novalidate>
+                    @Html.AntiForgeryToken()
+
+                    <div asp-validation-summary="ModelOnly" class="text-warning mb-3"></div>
+
+                    <div class="mb-3">
+                        <label asp-for="CipherType" class="form-label"></label>
+                        <select asp-for="CipherType" class="form-select" id="cipherType">
+                            @foreach (var option in Model.AvailableCiphers)
+                            {
+                                <option value="@option.Value">@option.Label</option>
+                            }
+                        </select>
+                    </div>
+
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label asp-for="Mode" class="form-label"></label>
+                            <select asp-for="Mode" class="form-select">
+                                <option value="encrypt">Mã hóa</option>
+                                <option value="decrypt">Giải mã</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6" id="caesarShiftGroup">
+                            <label asp-for="Shift" class="form-label"></label>
+                            <input asp-for="Shift" type="number" class="form-control" min="1" max="25" />
+                            <span asp-validation-for="Shift" class="text-warning"></span>
+                        </div>
+                    </div>
+
+                    <div class="mt-3" id="vigenereKeyGroup">
+                        <label asp-for="VigenereKey" class="form-label"></label>
+                        <input asp-for="VigenereKey" class="form-control" placeholder="VD: LEMON" />
+                        <span asp-validation-for="VigenereKey" class="text-warning"></span>
+                    </div>
+
+                    <div class="mt-3">
+                        <label asp-for="InputText" class="form-label"></label>
+                        <textarea asp-for="InputText" class="form-control" rows="5"
+                                  placeholder="Nhập thông điệp cần xử lý..."></textarea>
+                        <span asp-validation-for="InputText" class="text-warning"></span>
+                    </div>
+
+                    <div class="d-flex gap-2 mt-4">
+                        <button type="submit" class="btn btn-accent px-4">Xử lý</button>
+                        <a asp-action="Index" class="btn btn-outline-light">Làm mới</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="col-xl-5 reveal-on-scroll">
+            <div class="glass-card h-100 output-card">
+                <h2 class="h4 mb-3">Kết quả</h2>
+
+                @if (Model.HasResult)
+                {
+                    <div class="output-badge mb-3">@Model.CipherType.ToUpperInvariant() - @Model.Mode.ToUpperInvariant()</div>
+                    <pre class="output-text" id="outputText">@Model.OutputText</pre>
+                }
+                else
+                {
+                    <p class="text-secondary mb-0">Kết quả sẽ hiển thị tại đây sau khi bạn bấm nút <strong>Xử lý</strong>.</p>
+                }
+            </div>
+        </div>
+    </div>
+
+    @section Scripts {
+        <partial name="_ValidationScriptsPartial" />
+    }

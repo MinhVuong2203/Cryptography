@@ -1,0 +1,205 @@
+:root {
+  --bg-ink: #081a27;
+  --bg-deep: #102b40;
+  --bg-mint: #86d0c0;
+  --card: rgba(10, 31, 47, 0.82);
+  --text-main: #eaf4f7;
+  --text-muted: #b8cbd3;
+  --accent: #ffb100;
+  --accent-hover: #ffd166;
+  --border: rgba(255, 255, 255, 0.15);
+}
+
+html {
+  font-size: 15px;
+  min-height: 100%;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  font-family: "Space Grotesk", sans-serif;
+  color: var(--text-main);
+  background:
+    radial-gradient(circle at 15% 20%, rgba(255, 177, 0, 0.18) 0%, transparent 30%),
+    radial-gradient(circle at 85% 15%, rgba(134, 208, 192, 0.25) 0%, transparent 28%),
+    linear-gradient(140deg, var(--bg-ink), var(--bg-deep));
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+.navbar-brand {
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.topbar {
+  background: rgba(5, 17, 27, 0.82);
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(8px);
+}
+
+.nav-link {
+  color: var(--text-main) !important;
+  border-radius: 999px;
+  padding-inline: 0.85rem !important;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  background-color: rgba(255, 255, 255, 0.13);
+  color: #fff !important;
+}
+
+.hero-panel {
+  border: 1px solid var(--border);
+  background: linear-gradient(120deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.03));
+  backdrop-filter: blur(6px);
+  border-radius: 1.2rem;
+  padding: 2rem;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25);
+}
+
+.eyebrow {
+  letter-spacing: 0.14rem;
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+
+.glass-card {
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  background: var(--card);
+  padding: 1.5rem;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25);
+}
+
+.stats-card {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.stats-item {
+  border: 1px solid var(--border);
+  border-radius: 0.9rem;
+  padding: 0.9rem 1rem;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.stats-item span {
+  display: block;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.stats-item small {
+  color: var(--text-muted);
+}
+
+.btn-accent {
+  background: linear-gradient(90deg, var(--accent), #f09100);
+  border: none;
+  color: #222;
+  font-weight: 700;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+}
+
+.btn-accent:hover,
+.btn-accent:focus {
+  transform: translateY(-1px);
+  filter: brightness(1.05);
+  box-shadow: 0 10px 20px rgba(255, 177, 0, 0.22);
+}
+
+.btn-outline-light {
+  border-color: var(--border);
+}
+
+.form-control,
+.form-select {
+  background-color: rgba(0, 0, 0, 0.24);
+  border-color: var(--border);
+  color: var(--text-main);
+}
+
+.form-control:focus,
+.form-select:focus,
+.btn:focus,
+.btn:active:focus,
+.btn-link.nav-link:focus {
+  color: var(--text-main);
+  border-color: rgba(255, 177, 0, 0.8);
+  box-shadow: 0 0 0 0.2rem rgba(255, 177, 0, 0.28);
+}
+
+.form-control::placeholder {
+  color: rgba(234, 244, 247, 0.5);
+}
+
+.output-card {
+  position: sticky;
+  top: 1.2rem;
+}
+
+.output-badge {
+  display: inline-block;
+  border-radius: 999px;
+  padding: 0.4rem 0.75rem;
+  background: rgba(255, 177, 0, 0.2);
+  color: var(--accent-hover);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.output-text {
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px dashed rgba(255, 255, 255, 0.25);
+  color: #f6f9fa;
+  border-radius: 0.9rem;
+  min-height: 200px;
+  padding: 1rem;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.text-secondary {
+  color: var(--text-muted) !important;
+}
+
+.footer {
+  margin-top: 2rem;
+  border-top: 1px solid var(--border);
+  padding: 0.9rem 0;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.footer a {
+  color: var(--accent-hover);
+}
+
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 991.98px) {
+  .output-card {
+    position: static;
+  }
+}
