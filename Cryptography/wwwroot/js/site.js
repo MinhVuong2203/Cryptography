@@ -4,6 +4,9 @@
 	const cipherType = document.getElementById("cipherType");
 	const caesarShiftGroup = document.getElementById("caesarShiftGroup");
 	const vigenereKeyGroup = document.getElementById("vigenereKeyGroup");
+	const monoalphabeticKeyGroup = document.getElementById("monoalphabeticKeyGroup");
+	const playfairKeyGroup = document.getElementById("playfairKeyGroup");
+	const hillKeyGroup = document.getElementById("hillKeyGroup");
 	const cipherForm = document.querySelector('form[asp-action="Index"], form[action*="ClassicalCiphers"]') || document.querySelector("form");
 	const outputTextElement = document.getElementById("outputText");
 	const outputBadgeElement = document.querySelector(".output-badge");
@@ -20,6 +23,15 @@
 		const selected = cipherType.value;
 		caesarShiftGroup.style.display = selected === "caesar" ? "block" : "none";
 		vigenereKeyGroup.style.display = selected === "vigenere" ? "block" : "none";
+		if (monoalphabeticKeyGroup) {
+			monoalphabeticKeyGroup.style.display = selected === "monoalphabetic" ? "block" : "none";
+		}
+		if (playfairKeyGroup) {
+			playfairKeyGroup.style.display = selected === "playfair" ? "block" : "none";
+		}
+		if (hillKeyGroup) {
+			hillKeyGroup.style.display = selected === "hill" ? "block" : "none";
+		}
 	}
 
 	if (cipherType) {

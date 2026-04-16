@@ -1,29 +1,37 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\DAI HOC\\An to\u00E0n b\u1EA3o m\u1EADt th\u00F4ng tin\\Demo\\Cryptography\\",
+  "WorkspaceRootPath": "D:\\HK2_3\\ATTT\\Demo_BaoCao\\Cryptography\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FD082A36-6479-4B66-A407-EA4D60C9EE29}|Cryptography\\Cryptography.csproj|d:\\dai hoc\\an to\u00E0n b\u1EA3o m\u1EADt th\u00F4ng tin\\demo\\cryptography\\cryptography\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{FD082A36-6479-4B66-A407-EA4D60C9EE29}|Cryptography\\Cryptography.csproj|solutionrelative:cryptography\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{FD082A36-6479-4B66-A407-EA4D60C9EE29}|Cryptography\\Cryptography.csproj|d:\\hk2_3\\attt\\demo_baocao\\cryptography\\cryptography\\models\\classicalcipherviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FD082A36-6479-4B66-A407-EA4D60C9EE29}|Cryptography\\Cryptography.csproj|solutionrelative:cryptography\\models\\classicalcipherviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FD082A36-6479-4B66-A407-EA4D60C9EE29}|Cryptography\\Cryptography.csproj|d:\\dai hoc\\an to\u00E0n b\u1EA3o m\u1EADt th\u00F4ng tin\\demo\\cryptography\\cryptography\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{FD082A36-6479-4B66-A407-EA4D60C9EE29}|Cryptography\\Cryptography.csproj|solutionrelative:cryptography\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{FD082A36-6479-4B66-A407-EA4D60C9EE29}|Cryptography\\Cryptography.csproj|d:\\hk2_3\\attt\\demo_baocao\\cryptography\\cryptography\\views\\classicalciphers\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FD082A36-6479-4B66-A407-EA4D60C9EE29}|Cryptography\\Cryptography.csproj|solutionrelative:cryptography\\views\\classicalciphers\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FD082A36-6479-4B66-A407-EA4D60C9EE29}|Cryptography\\Cryptography.csproj|d:\\dai hoc\\an to\u00E0n b\u1EA3o m\u1EADt th\u00F4ng tin\\demo\\cryptography\\cryptography\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{FD082A36-6479-4B66-A407-EA4D60C9EE29}|Cryptography\\Cryptography.csproj|solutionrelative:cryptography\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FD082A36-6479-4B66-A407-EA4D60C9EE29}|Cryptography\\Cryptography.csproj|d:\\dai hoc\\an to\u00E0n b\u1EA3o m\u1EADt th\u00F4ng tin\\demo\\cryptography\\cryptography\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FD082A36-6479-4B66-A407-EA4D60C9EE29}|Cryptography\\Cryptography.csproj|solutionrelative:cryptography\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FD082A36-6479-4B66-A407-EA4D60C9EE29}|Cryptography\\Cryptography.csproj|d:\\dai hoc\\an to\u00E0n b\u1EA3o m\u1EADt th\u00F4ng tin\\demo\\cryptography\\cryptography\\controllers\\classicalcipherscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FD082A36-6479-4B66-A407-EA4D60C9EE29}|Cryptography\\Cryptography.csproj|d:\\hk2_3\\attt\\demo_baocao\\cryptography\\cryptography\\controllers\\classicalcipherscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FD082A36-6479-4B66-A407-EA4D60C9EE29}|Cryptography\\Cryptography.csproj|solutionrelative:cryptography\\controllers\\classicalcipherscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FD082A36-6479-4B66-A407-EA4D60C9EE29}|Cryptography\\Cryptography.csproj|d:\\dai hoc\\an to\u00E0n b\u1EA3o m\u1EADt th\u00F4ng tin\\demo\\cryptography\\cryptography\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "AbsoluteMoniker": "D:0:0:{FD082A36-6479-4B66-A407-EA4D60C9EE29}|Cryptography\\Cryptography.csproj|d:\\hk2_3\\attt\\demo_baocao\\cryptography\\cryptography\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{FD082A36-6479-4B66-A407-EA4D60C9EE29}|Cryptography\\Cryptography.csproj|solutionrelative:cryptography\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FD082A36-6479-4B66-A407-EA4D60C9EE29}|Cryptography\\Cryptography.csproj|d:\\hk2_3\\attt\\demo_baocao\\cryptography\\cryptography\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FD082A36-6479-4B66-A407-EA4D60C9EE29}|Cryptography\\Cryptography.csproj|solutionrelative:cryptography\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FD082A36-6479-4B66-A407-EA4D60C9EE29}|Cryptography\\Cryptography.csproj|d:\\hk2_3\\attt\\demo_baocao\\cryptography\\cryptography\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FD082A36-6479-4B66-A407-EA4D60C9EE29}|Cryptography\\Cryptography.csproj|solutionrelative:cryptography\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FD082A36-6479-4B66-A407-EA4D60C9EE29}|Cryptography\\Cryptography.csproj|d:\\hk2_3\\attt\\demo_baocao\\cryptography\\cryptography\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FD082A36-6479-4B66-A407-EA4D60C9EE29}|Cryptography\\Cryptography.csproj|solutionrelative:cryptography\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FD082A36-6479-4B66-A407-EA4D60C9EE29}|Cryptography\\Cryptography.csproj|d:\\hk2_3\\attt\\demo_baocao\\cryptography\\cryptography\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{FD082A36-6479-4B66-A407-EA4D60C9EE29}|Cryptography\\Cryptography.csproj|solutionrelative:cryptography\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     }
   ],
@@ -34,27 +42,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 11,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
-              "Name": "ST:130:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:131:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Bookmark",
               "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
             },
             {
               "$type": "Bookmark",
@@ -66,85 +58,130 @@
             },
             {
               "$type": "Bookmark",
+              "Name": "ST:130:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{fbcae063-e2c0-4ab1-a516-996ea3dafb72}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "D:\\DAI HOC\\An to\u00E0n b\u1EA3o m\u1EADt th\u00F4ng tin\\Demo\\Cryptography\\Cryptography\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "Cryptography\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "D:\\DAI HOC\\An to\u00E0n b\u1EA3o m\u1EADt th\u00F4ng tin\\Demo\\Cryptography\\Cryptography\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "Cryptography\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAAB8AAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-04-15T13:01:01.26Z",
+              "DocumentIndex": 0,
+              "Title": "ClassicalCipherViewModel.cs",
+              "DocumentMoniker": "D:\\HK2_3\\ATTT\\Demo_BaoCao\\Cryptography\\Cryptography\\Models\\ClassicalCipherViewModel.cs",
+              "RelativeDocumentMoniker": "Cryptography\\Models\\ClassicalCipherViewModel.cs",
+              "ToolTip": "D:\\HK2_3\\ATTT\\Demo_BaoCao\\Cryptography\\Cryptography\\Models\\ClassicalCipherViewModel.cs",
+              "RelativeToolTip": "Cryptography\\Models\\ClassicalCipherViewModel.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABYAAABKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-16T03:31:26.652Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "D:\\DAI HOC\\An to\u00E0n b\u1EA3o m\u1EADt th\u00F4ng tin\\Demo\\Cryptography\\Cryptography\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "Cryptography\\Controllers\\HomeController.cs",
-              "ToolTip": "D:\\DAI HOC\\An to\u00E0n b\u1EA3o m\u1EADt th\u00F4ng tin\\Demo\\Cryptography\\Cryptography\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "Cryptography\\Controllers\\HomeController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-15T12:55:46.453Z",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\HK2_3\\ATTT\\Demo_BaoCao\\Cryptography\\Cryptography\\Views\\ClassicalCiphers\\Index.cshtml",
+              "RelativeDocumentMoniker": "Cryptography\\Views\\ClassicalCiphers\\Index.cshtml",
+              "ToolTip": "D:\\HK2_3\\ATTT\\Demo_BaoCao\\Cryptography\\Cryptography\\Views\\ClassicalCiphers\\Index.cshtml",
+              "RelativeToolTip": "Cryptography\\Views\\ClassicalCiphers\\Index.cshtml",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAAAF0AAABuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-16T03:31:15.637Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\HK2_3\\ATTT\\Demo_BaoCao\\Cryptography\\Cryptography\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Cryptography\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\HK2_3\\ATTT\\Demo_BaoCao\\Cryptography\\Cryptography\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Cryptography\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAB8AAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-15T13:01:01.26Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "D:\\HK2_3\\ATTT\\Demo_BaoCao\\Cryptography\\Cryptography\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Cryptography\\Controllers\\HomeController.cs",
+              "ToolTip": "D:\\HK2_3\\ATTT\\Demo_BaoCao\\Cryptography\\Cryptography\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Cryptography\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-15T12:55:46.453Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "ClassicalCiphersController.cs",
-              "DocumentMoniker": "D:\\DAI HOC\\An to\u00E0n b\u1EA3o m\u1EADt th\u00F4ng tin\\Demo\\Cryptography\\Cryptography\\Controllers\\ClassicalCiphersController.cs",
+              "DocumentMoniker": "D:\\HK2_3\\ATTT\\Demo_BaoCao\\Cryptography\\Cryptography\\Controllers\\ClassicalCiphersController.cs",
               "RelativeDocumentMoniker": "Cryptography\\Controllers\\ClassicalCiphersController.cs",
-              "ToolTip": "D:\\DAI HOC\\An to\u00E0n b\u1EA3o m\u1EADt th\u00F4ng tin\\Demo\\Cryptography\\Cryptography\\Controllers\\ClassicalCiphersController.cs",
+              "ToolTip": "D:\\HK2_3\\ATTT\\Demo_BaoCao\\Cryptography\\Cryptography\\Controllers\\ClassicalCiphersController.cs",
               "RelativeToolTip": "Cryptography\\Controllers\\ClassicalCiphersController.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAowD8AAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-15T12:55:45.662Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "site.css",
-              "DocumentMoniker": "D:\\DAI HOC\\An to\u00E0n b\u1EA3o m\u1EADt th\u00F4ng tin\\Demo\\Cryptography\\Cryptography\\wwwroot\\css\\site.css",
+              "DocumentMoniker": "D:\\HK2_3\\ATTT\\Demo_BaoCao\\Cryptography\\Cryptography\\wwwroot\\css\\site.css",
               "RelativeDocumentMoniker": "Cryptography\\wwwroot\\css\\site.css",
-              "ToolTip": "D:\\DAI HOC\\An to\u00E0n b\u1EA3o m\u1EADt th\u00F4ng tin\\Demo\\Cryptography\\Cryptography\\wwwroot\\css\\site.css",
+              "ToolTip": "D:\\HK2_3\\ATTT\\Demo_BaoCao\\Cryptography\\Cryptography\\wwwroot\\css\\site.css",
               "RelativeToolTip": "Cryptography\\wwwroot\\css\\site.css",
               "ViewState": "AgIAABQAAAAAAAAAAAAuwC8AAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2026-04-15T12:55:37.331Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-15T12:55:37.331Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "site.js",
+              "DocumentMoniker": "D:\\HK2_3\\ATTT\\Demo_BaoCao\\Cryptography\\Cryptography\\wwwroot\\js\\site.js",
+              "RelativeDocumentMoniker": "Cryptography\\wwwroot\\js\\site.js",
+              "ToolTip": "D:\\HK2_3\\ATTT\\Demo_BaoCao\\Cryptography\\Cryptography\\wwwroot\\js\\site.js",
+              "RelativeToolTip": "Cryptography\\wwwroot\\js\\site.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-04-15T12:55:28.055Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "site.js",
-              "DocumentMoniker": "D:\\DAI HOC\\An to\u00E0n b\u1EA3o m\u1EADt th\u00F4ng tin\\Demo\\Cryptography\\Cryptography\\wwwroot\\js\\site.js",
-              "RelativeDocumentMoniker": "Cryptography\\wwwroot\\js\\site.js",
-              "ToolTip": "D:\\DAI HOC\\An to\u00E0n b\u1EA3o m\u1EADt th\u00F4ng tin\\Demo\\Cryptography\\Cryptography\\wwwroot\\js\\site.js",
-              "RelativeToolTip": "Cryptography\\wwwroot\\js\\site.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2026-04-15T12:55:28.055Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\DAI HOC\\An to\u00E0n b\u1EA3o m\u1EADt th\u00F4ng tin\\Demo\\Cryptography\\Cryptography\\Views\\Home\\Index.cshtml",
+              "DocumentMoniker": "D:\\HK2_3\\ATTT\\Demo_BaoCao\\Cryptography\\Cryptography\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "Cryptography\\Views\\Home\\Index.cshtml",
-              "ToolTip": "D:\\DAI HOC\\An to\u00E0n b\u1EA3o m\u1EADt th\u00F4ng tin\\Demo\\Cryptography\\Cryptography\\Views\\Home\\Index.cshtml",
+              "ToolTip": "D:\\HK2_3\\ATTT\\Demo_BaoCao\\Cryptography\\Cryptography\\Views\\Home\\Index.cshtml",
               "RelativeToolTip": "Cryptography\\Views\\Home\\Index.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-04-15T10:37:04.948Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-15T10:37:04.948Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{74946827-37a0-11d2-a273-00c04f8ef4ff}"
             }
           ]
         },
