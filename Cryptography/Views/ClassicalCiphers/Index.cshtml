@@ -14,7 +14,7 @@
             <div class="col-lg-5">
                 <div class="stats-card">
                     <div class="stats-item">
-                        <span>3</span>
+                        <span>6</span>
                         <small>Cổ điển</small>
                     </div>
                     <div class="stats-item">
@@ -69,6 +69,31 @@
                         <label asp-for="VigenereKey" class="form-label"></label>
                         <input asp-for="VigenereKey" class="form-control" placeholder="VD: LEMON" />
                         <span asp-validation-for="VigenereKey" class="text-warning"></span>
+                    </div>
+
+                    <div class="mt-3" id="monoalphabeticKeyGroup">
+                        <label asp-for="MonoalphabeticKey" class="form-label"></label>
+                        <input asp-for="MonoalphabeticKey" class="form-control" placeholder="VD: ZPBYJRSKFLXQNWVDHMGUTOIAEC" />
+                        <div class="form-text text-secondary">Nhập 26 chữ cái không trùng lặp.</div>
+                        <span asp-validation-for="MonoalphabeticKey" class="text-warning"></span>
+                    </div>
+
+                    <div class="mt-3" id="playfairKeyGroup">
+                        <label asp-for="PlayfairKey" class="form-label"></label>
+                        <input asp-for="PlayfairKey" class="form-control" placeholder="VD: INSTRUMENT" />
+                        <div class="form-text text-secondary">I/J dùng chung một ô.</div>
+                        <span asp-validation-for="PlayfairKey" class="text-warning"></span>
+                    </div>
+
+                    <div class="mt-3" id="hillKeyGroup">
+                        <label asp-for="HillMatrixSize" class="form-label"></label>
+                        <input asp-for="HillMatrixSize" type="number" class="form-control" min="2" max="5" />
+                        <span asp-validation-for="HillMatrixSize" class="text-warning"></span>
+
+                        <label asp-for="HillKey" class="form-label mt-3"></label>
+                        <textarea asp-for="HillKey" class="form-control" rows="3" placeholder="VD: 3 3 2 5"></textarea>
+                        <div class="form-text text-secondary">Nhập đủ m x m phần tử theo kích thước.</div>
+                        <span asp-validation-for="HillKey" class="text-warning"></span>
                     </div>
 
                     <div class="mt-3">
