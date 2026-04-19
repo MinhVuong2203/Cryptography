@@ -375,3 +375,7 @@ yarn-error.log
 *.db
 *.sqlite
 *.sqlite3
+.vs/Cryptography/DesignTimeBuild/.dtbcache.v2
+.vs/ProjectEvaluation/cryptography.metadata.v9.bin
+.vs/ProjectEvaluation/cryptography.projects.v9.bin
+.vs/ProjectEvaluation/cryptography.strings.v9.bin
