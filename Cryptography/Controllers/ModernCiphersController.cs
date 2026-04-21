@@ -36,6 +36,9 @@ namespace Cryptography.Controllers
                 "tiny-rc4" => TransformTinyRc4(model.InputText ?? string.Empty, model.Key ?? string.Empty, encrypt, ModelState),
                 "a5-1" => TransformA51(model.InputText ?? string.Empty, model.Key ?? string.Empty, encrypt, ModelState),
                 "rc4" => TransformRc4(model.InputText ?? string.Empty, model.Key ?? string.Empty, encrypt, ModelState),
+                "tiny-des" => TransformTinyDes(model.InputText ?? string.Empty,
+                                    model.Key ?? string.Empty,
+                                    encrypt, ModelState),
                 _ => model.InputText ?? string.Empty
             };
 
@@ -578,6 +581,133 @@ namespace Cryptography.Controllers
                 var plainBits = XorBits(cipherBits, keyStream);
                 return BinaryToText(plainBits);
             }
+        }
+
+
+        private static string TransformTinyDes(string input, string key, bool encrypt,
+                                                ModelStateDictionary modelState)
+        {
+            var keyBits = (key ?? string.Empty).Replace(".", "").Replace(" ", "").Trim();
+            if (keyBits.Length != 8 || !IsBinary(keyBits))
+            {
+                modelState.AddModelError(nameof(ModernCipherViewModel.Key),
+                    "Khóa Tiny DES phải là chuỗi nhị phân đúng 8 bit. Ví dụ: 10011010");
+                return string.Empty;
+            }
+
+            if (string.IsNullOrWhiteSpace(input))
+            {
+                modelState.AddModelError(nameof(ModernCipherViewModel.InputText),
+                    encrypt ? "Vui lòng nhập chuỗi 8 bit bản rõ (ví dụ: 01011100)."
+                            : "Vui lòng nhập chuỗi 8 bit bản mã.");
+                return string.Empty;
+            }
+
+            var dataBits = input.Replace(".", "").Replace(" ", "").Trim();
+            if (dataBits.Length != 8 || !IsBinary(dataBits))
+            {
+                modelState.AddModelError(nameof(ModernCipherViewModel.InputText),
+                    "Tiny DES yêu cầu đúng 8 bit nhị phân. Ví dụ: 01011100");
+                return string.Empty;
+            }
+
+            var subKeys = TinyDesGenerateSubKeys(keyBits);
+
+            var L = dataBits[..4];
+            var R = dataBits[4..];
+
+            if (encrypt)
+            {
+                for (int r = 0; r < 3; r++)
+                {
+                    var newR = XorBits(L, TinyDesF(R, subKeys[r]));
+                    L = R;
+                    R = newR;
+                }
+            }
+            else
+            {
+                for (int r = 2; r >= 0; r--)
+                {
+                    var newL = XorBits(R, TinyDesF(L, subKeys[r]));
+                    R = L;
+                    L = newL;
+                }
+            }
+
+            return L + R;
+        }
+
+        private static string[] TinyDesGenerateSubKeys(string key8)
+        {
+            var kl = key8[..4];
+            var kr = key8[4..];
+
+            static string LeftShift(string s, int n)
+            {
+                n %= s.Length;
+                return s[n..] + s[..n];
+            }
+
+            static string Compress(string kl4, string kr4)
+            {
+                var k = kl4 + kr4; 
+                return $"{k[5]}{k[1]}{k[3]}{k[2]}{k[7]}{k[0]}";
+            }
+
+            // Round 1: LS-1
+            var kl1 = LeftShift(kl, 1);
+            var kr1 = LeftShift(kr, 1);
+            var k1 = Compress(kl1, kr1);
+
+            var kl2 = LeftShift(kl1, 2);
+            var kr2 = LeftShift(kr1, 2);
+            var k2 = Compress(kl2, kr2);
+
+            var kl3 = LeftShift(kl2, 1);
+            var kr3 = LeftShift(kr2, 1);
+            var k3 = Compress(kl3, kr3);
+
+            return [k1, k2, k3];
+        }
+
+
+        private static string TinyDesF(string r4, string k6)
+        {
+            var expanded = TinyDesExpand(r4);        // 4 → 6 bit
+            var xored = XorBits(expanded, k6);       // 6 XOR 6
+            var sboxed = TinyDesSBox(xored);         // 6 → 4 bit
+            return TinyDesPBox(sboxed);              // 4 → 4 bit
+        }
+
+        private static string TinyDesExpand(string r4)
+        {
+
+            char b0 = r4[0], b1 = r4[1], b2 = r4[2], b3 = r4[3];
+            return $"{b2}{b3}{b1}{b2}{b1}{b0}";
+        }
+
+        private static string TinyDesSBox(string x6)
+        {
+            // row = b0b5, col = b1b2b3b4
+            int row = ((x6[0] - '0') << 1) | (x6[5] - '0');
+            int col = ((x6[1] - '0') << 3) | ((x6[2] - '0') << 2)
+                    | ((x6[3] - '0') << 1) | (x6[4] - '0');
+
+            int[][] sbox =
+            [
+                [0xE, 0x4, 0xD, 0x1, 0x2, 0xF, 0xB, 0x8, 0x3, 0xA, 0x6, 0xC, 0x5, 0x9, 0x0, 0x7],
+        [0x0, 0xF, 0x7, 0x4, 0xE, 0x2, 0xD, 0x1, 0xA, 0x6, 0xC, 0xB, 0x9, 0x5, 0x3, 0x8],
+        [0x4, 0x1, 0xE, 0x8, 0xD, 0x6, 0x2, 0xB, 0xF, 0xC, 0x9, 0x7, 0x3, 0xA, 0x5, 0x0],
+        [0xF, 0xC, 0x8, 0x2, 0x4, 0x9, 0x1, 0x7, 0x5, 0xB, 0x3, 0xE, 0xA, 0x0, 0x6, 0xD],
+    ];
+
+            return Convert.ToString(sbox[row][col], 2).PadLeft(4, '0');
+        }
+
+        private static string TinyDesPBox(string s4)
+        {
+            return $"{s4[2]}{s4[0]}{s4[3]}{s4[1]}";
         }
 
         private static bool TryParseA51Key(string key, out string x, out string y, out string z)
