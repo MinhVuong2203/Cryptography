@@ -22,6 +22,14 @@ namespace Cryptography.Controllers
                 ModelState.AddModelError(nameof(model.VigenereKey), "Vui lòng nhập khóa cho Vigenere.");
             }
 
+            if (string.Equals(model.CipherType, "permutation", StringComparison.OrdinalIgnoreCase))
+            {
+                if (!TryParsePermutationKey(model.PermutationKey, out _, out var errorMessage))
+                {
+                    ModelState.AddModelError(nameof(model.PermutationKey), errorMessage);
+                }
+            }
+
             if (string.Equals(model.CipherType, "monoalphabetic", StringComparison.OrdinalIgnoreCase))
             {
                 if (!TryNormalizeMonoalphabeticKey(model.MonoalphabeticKey, out _))
@@ -53,7 +61,7 @@ namespace Cryptography.Controllers
             {
                 "caesar" => CaesarTransform(model.InputText, model.Shift, encrypt),
                 "vigenere" => VigenereTransform(model.InputText, model.VigenereKey, encrypt),
-                "atbash" => AtbashTransform(model.InputText),
+                "permutation" => PermutationTransform(model.InputText, model.PermutationKey, encrypt),
                 "monoalphabetic" => MonoalphabeticTransform(model.InputText, model.MonoalphabeticKey, encrypt),
                 "playfair" => PlayfairTransform(model.InputText, model.PlayfairKey, encrypt),
                 "hill" => HillTransform(model.InputText, model.HillKey, model.HillMatrixSize, encrypt, ModelState),
@@ -67,7 +75,7 @@ namespace Cryptography.Controllers
 
             return View(model);
         }
-
+        // Caesar
         private static string CaesarTransform(string text, int shift, bool encrypt)
         {
             var normalizedShift = shift % 26;
@@ -93,7 +101,7 @@ namespace Cryptography.Controllers
 
             return result.ToString();
         }
-
+        // Vigenere
         private static string VigenereTransform(string text, string key, bool encrypt)
         {
             var cleanKey = new string(key.Where(char.IsLetter).Select(char.ToUpperInvariant).ToArray());
@@ -125,25 +133,6 @@ namespace Cryptography.Controllers
             return result.ToString();
         }
 
-        private static string AtbashTransform(string text)
-        {
-            var result = new StringBuilder(text.Length);
-            foreach (var ch in text)
-            {
-                if (char.IsLetter(ch))
-                {
-                    var offset = char.IsUpper(ch) ? 'A' : 'a';
-                    var transformed = (char)(offset + (25 - (ch - offset)));
-                    result.Append(transformed);
-                }
-                else
-                {
-                    result.Append(ch);
-                }
-            }
-
-            return result.ToString();
-        }
 
         private static bool TryNormalizeMonoalphabeticKey(string key, out string normalized)
         {
@@ -158,7 +147,7 @@ namespace Cryptography.Controllers
 
             return normalized.Distinct().Count() == 26;
         }
-
+        // Monoalphabetic
         private static string MonoalphabeticTransform(string text, string key, bool encrypt)
         {
             if (!TryNormalizeMonoalphabeticKey(key, out var normalizedKey))
@@ -192,7 +181,7 @@ namespace Cryptography.Controllers
 
             return result.ToString();
         }
-
+        // Playfair
         private static string PlayfairTransform(string text, string key, bool encrypt)
         {
             var keyMatrix = BuildPlayfairMatrix(key, out var positions);
@@ -224,6 +213,184 @@ namespace Cryptography.Controllers
             }
 
             return result.ToString();
+        }
+
+        private static bool TryParsePermutationKey(string? key, out int[] columnReadOrder, out string errorMessage)
+        {
+            const int MaxKeyLength = 256;
+
+            columnReadOrder = Array.Empty<int>();
+            errorMessage = string.Empty;
+
+            if (string.IsNullOrWhiteSpace(key))
+            {
+                errorMessage = "Vui lòng nhập khóa cho Permutation. VD: MONARCH hoặc 3 1 4 2";
+                return false;
+            }
+
+            var trimmed = key.Trim();
+
+            // Khóa chữ: sắp xếp chữ cái tăng dần (ổn định theo vị trí) để lấy thứ tự đọc cột.
+            if (trimmed.Any(char.IsLetter))
+            {
+                var cleanKey = new string(trimmed.Where(char.IsLetter).Select(char.ToUpperInvariant).ToArray());
+                if (cleanKey.Length < 2)
+                {
+                    errorMessage = "Khóa Permutation phải có ít nhất 2 ký tự. VD: MONARCH";
+                    return false;
+                }
+
+                if (cleanKey.Length > MaxKeyLength)
+                {
+                    errorMessage = $"Khóa Permutation quá dài (tối đa {MaxKeyLength} ký tự).";
+                    return false;
+                }
+
+                columnReadOrder = cleanKey
+                    .Select((ch, index) => (ch, index))
+                    .OrderBy(x => x.ch)
+                    .ThenBy(x => x.index)
+                    .Select(x => x.index)
+                    .ToArray();
+
+                return true;
+            }
+
+            // Khóa số: coi như thứ tự đọc cột trực tiếp (1-indexed), ví dụ 3 1 4 2.
+            var values = new List<int>();
+            if (trimmed.All(char.IsDigit))
+            {
+                foreach (var ch in trimmed)
+                {
+                    values.Add(ch - '0');
+                }
+            }
+            else
+            {
+                var parts = trimmed.Split([' ', ',', ';', '-', '_', '\t', '\r', '\n'], StringSplitOptions.RemoveEmptyEntries);
+                foreach (var part in parts)
+                {
+                    if (!int.TryParse(part, out var value))
+                    {
+                        errorMessage = "Khóa Permutation không hợp lệ. VD: MONARCH hoặc 3 1 4 2";
+                        return false;
+                    }
+
+                    values.Add(value);
+                }
+            }
+
+            if (values.Count < 2)
+            {
+                errorMessage = "Khóa Permutation phải có ít nhất 2 phần tử.";
+                return false;
+            }
+
+            if (values.Count > MaxKeyLength)
+            {
+                errorMessage = $"Khóa Permutation quá dài (tối đa {MaxKeyLength} phần tử).";
+                return false;
+            }
+
+            var n = values.Count;
+            var seen = new bool[n + 1];
+            foreach (var value in values)
+            {
+                if (value < 1 || value > n)
+                {
+                    errorMessage = $"Khóa Permutation phải là hoán vị của 1..{n}. VD: 3 1 4 2";
+                    return false;
+                }
+
+                if (seen[value])
+                {
+                    errorMessage = "Khóa Permutation bị trùng phần tử. VD: 3 1 4 2";
+                    return false;
+                }
+
+                seen[value] = true;
+            }
+
+            columnReadOrder = values.Select(v => v - 1).ToArray();
+            return true;
+        }
+        // Permutation
+        private static string PermutationTransform(string text, string? key, bool encrypt)
+        {
+            // Columnar transposition: ghi theo hàng, đọc theo cột theo thứ tự khóa.
+            if (!TryParsePermutationKey(key, out var columnReadOrder, out _))
+            {
+                return text;
+            }
+
+            if (string.IsNullOrEmpty(text))
+            {
+                return string.Empty;
+            }
+
+            var cols = columnReadOrder.Length;
+            if (cols <= 1)
+            {
+                return text;
+            }
+
+            if (encrypt)
+            {
+                // Ghi theo hàng: ký tự i thuộc cột (i % cols).
+                var columnBuffers = new StringBuilder[cols];
+                for (var c = 0; c < cols; c++)
+                {
+                    columnBuffers[c] = new StringBuilder();
+                }
+
+                for (var i = 0; i < text.Length; i++)
+                {
+                    columnBuffers[i % cols].Append(text[i]);
+                }
+
+                // Đọc theo cột theo thứ tự khóa.
+                var result = new StringBuilder(text.Length);
+                foreach (var c in columnReadOrder)
+                {
+                    result.Append(columnBuffers[c]);
+                }
+
+                return result.ToString();
+            }
+
+            // Giải mã: biết độ dài từng cột (một số cột đầu có thêm 1 ký tự nếu có dư).
+            var fullRows = text.Length / cols;
+            var remainder = text.Length % cols;
+            var rows = fullRows + (remainder > 0 ? 1 : 0);
+
+            var columnLengths = new int[cols];
+            for (var c = 0; c < cols; c++)
+            {
+                columnLengths[c] = fullRows + (c < remainder ? 1 : 0);
+            }
+
+            var columns = new string[cols];
+            var index = 0;
+            foreach (var c in columnReadOrder)
+            {
+                var len = columnLengths[c];
+                columns[c] = len == 0 ? string.Empty : text.Substring(index, len);
+                index += len;
+            }
+
+            var plain = new StringBuilder(text.Length);
+            for (var r = 0; r < rows; r++)
+            {
+                for (var c = 0; c < cols; c++)
+                {
+                    if (r < columns[c].Length)
+                    {
+                        plain.Append(columns[c][r]);
+                    }
+                }
+            }
+
+            return plain.ToString();
         }
 
         private static char[,] BuildPlayfairMatrix(string key, out Dictionary<char, (int row, int col)> positions)

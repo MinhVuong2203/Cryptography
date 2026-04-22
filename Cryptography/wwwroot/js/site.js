@@ -4,6 +4,7 @@
 	const cipherType = document.getElementById("cipherType");
 	const caesarShiftGroup = document.getElementById("caesarShiftGroup");
 	const vigenereKeyGroup = document.getElementById("vigenereKeyGroup");
+	const permutationKeyGroup = document.getElementById("permutationKeyGroup");
 	const monoalphabeticKeyGroup = document.getElementById("monoalphabeticKeyGroup");
 	const playfairKeyGroup = document.getElementById("playfairKeyGroup");
 	const hillKeyGroup = document.getElementById("hillKeyGroup");
@@ -16,13 +17,20 @@
 	const gateLinks = document.querySelectorAll(".gate-link");
 
 	function toggleCipherFields() {
-		if (!cipherType || !caesarShiftGroup || !vigenereKeyGroup) {
+		if (!cipherType) {
 			return;
 		}
 
 		const selected = cipherType.value;
-		caesarShiftGroup.style.display = selected === "caesar" ? "block" : "none";
-		vigenereKeyGroup.style.display = selected === "vigenere" ? "block" : "none";
+		if (caesarShiftGroup) {
+			caesarShiftGroup.style.display = selected === "caesar" ? "block" : "none";
+		}
+		if (vigenereKeyGroup) {
+			vigenereKeyGroup.style.display = selected === "vigenere" ? "block" : "none";
+		}
+		if (permutationKeyGroup) {
+			permutationKeyGroup.style.display = selected === "permutation" ? "block" : "none";
+		}
 		if (monoalphabeticKeyGroup) {
 			monoalphabeticKeyGroup.style.display = selected === "monoalphabetic" ? "block" : "none";
 		}

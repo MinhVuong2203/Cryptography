@@ -256,11 +256,32 @@ h5,
   color: var(--text-main);
 }
 
+/* Improve option readability when the native dropdown opens (Windows often shows a light menu).
+   color-scheme hints the UA to render controls using a dark palette.
+   The option rules are best-effort (support varies by browser/OS). */
+.form-select {
+  color-scheme: dark;
+}
+
+.form-select option,
+.form-select optgroup {
+  background-color: var(--bg-deep);
+  color: var(--text-main);
+}
+
+.form-select option:checked,
+.form-select option:hover,
+.form-select option:focus {
+  background-color: var(--accent);
+  color: var(--bg-ink);
+}
+
 .form-control:focus,
 .form-select:focus,
 .btn:focus,
 .btn:active:focus,
 .btn-link.nav-link:focus {
+  background-color: rgba(0, 0, 0, 0.24);
   color: var(--text-main);
   border-color: rgba(255, 177, 0, 0.8);
   box-shadow: 0 0 0 0.2rem rgba(255, 177, 0, 0.28);

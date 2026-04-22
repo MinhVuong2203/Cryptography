@@ -33,6 +33,9 @@ namespace Cryptography.Models
         [Display(Name = "Khóa (Playfair)")]
         public string PlayfairKey { get; set; } = "INSTRUMENT";
 
+        [Display(Name = "Khóa (Permutation)")]
+        public string PermutationKey { get; set; } = "MONARCH";
+
         [Range(2, 5, ErrorMessage = "Kích thước ma trận Hill phải từ 2 đến 5.")]
         [Display(Name = "Kích thước ma trận (Hill)")]
         public int HillMatrixSize { get; set; } = 2;
@@ -44,7 +47,7 @@ namespace Cryptography.Models
         [
             new CipherOption { Value = "caesar", Label = "Mật mã Caesar" },
             new CipherOption { Value = "vigenere", Label = "Mật mã Vigenere" },
-            new CipherOption { Value = "atbash", Label = "Mật mã Atbash" },
+            new CipherOption { Value = "permutation", Label = "Mật mã hoán vị (Permutation Cipher)" },
             new CipherOption { Value = "monoalphabetic", Label = "Mật mã Monoalphabetic" },
             new CipherOption { Value = "playfair", Label = "Mật mã Playfair" },
             new CipherOption { Value = "hill", Label = "Mật mã Hill" }
