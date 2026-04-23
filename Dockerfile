@@ -2,18 +2,19 @@
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
 
-# copy toàn bộ source
 COPY . .
 
-# restore + publish
-RUN dotnet restore Cryptography.csproj
-RUN dotnet publish Cryptography.csproj -c Release -o /app/publish
+# đi vào đúng thư mục project
+WORKDIR /src/Cryptography
+
+RUN dotnet restore
+RUN dotnet publish -c Release -o /app/publish
 
 # ===== Runtime stage =====
 FROM mcr.microsoft.com/dotnet/aspnet:8.0
 WORKDIR /app
 
-# Railway inject PORT -> phải dùng biến này
+# Railway sẽ inject PORT
 ENV ASPNETCORE_URLS=http://+:${PORT}
 
 COPY --from=build /app/publish .
