@@ -29,8 +29,8 @@ namespace Cryptography.Models
         [
             new CipherOption { Value = "tiny-a5-1", Label = "Tiny A5/1" },
             new CipherOption { Value = "tiny-rc4", Label = "Tiny RC4" },
-            new CipherOption { Value = "a5-1", Label = "A5/1" },
-            new CipherOption { Value = "rc4", Label = "RC4" },
+            //new CipherOption { Value = "a5-1", Label = "A5/1" },
+            //new CipherOption { Value = "rc4", Label = "RC4" },
             new CipherOption { Value = "tiny-des", Label = "Tiny DES" }
         ];
 
