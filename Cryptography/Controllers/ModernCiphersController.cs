@@ -584,8 +584,7 @@ namespace Cryptography.Controllers
         }
 
 
-        private static string TransformTinyDes(string input, string key, bool encrypt,
-                                                ModelStateDictionary modelState)
+        private static string TransformTinyDes(string input, string key, bool encrypt, ModelStateDictionary modelState)
         {
             var keyBits = (key ?? string.Empty).Replace(".", "").Replace(" ", "").Trim();
             if (keyBits.Length != 8 || !IsBinary(keyBits))

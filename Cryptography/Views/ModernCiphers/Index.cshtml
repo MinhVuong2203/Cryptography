@@ -10,7 +10,7 @@
             <h1 class="display-5 fw-bold mb-3">Demo Mật mã hiện đại</h1>
             <p class="lead mb-0">Thử nghiệm Tiny A5/1 và Tiny RC4 theo thời gian thực. Nhập khóa, chọn chế độ, xem kết quả ngay.</p>
         </div>
-        <div class="col-lg-5">
+        @* <div class="col-lg-5">
             <div class="stats-card">
                 <div class="stats-item">
                     <span>2</span>
@@ -25,7 +25,7 @@
                     <small>Đầu ra</small>
                 </div>
             </div>
-        </div>
+        </div> *@
     </div>
 </section>
 
@@ -50,7 +50,7 @@
                 </div>
 
                 <div class="row g-3">
-                    @* <div class="col-md-6">
+                    <div class="col-md-6">
                         <label asp-for="Mode" class="form-label"></label>
                         <select asp-for="Mode" class="form-select">
                             <option value="encrypt">Mã hóa</option>
@@ -61,7 +61,7 @@
                         <label asp-for="Key" class="form-label"></label>
                         <input asp-for="Key" class="form-control" placeholder="Nhập khóa" />
                         <span asp-validation-for="Key" class="text-warning"></span>
-                    </div> *@
+                    </div>
                     <div class="col-md-6">
                         <label asp-for="Mode" class="form-label"></label>
                         <select asp-for="Mode" class="form-select">
