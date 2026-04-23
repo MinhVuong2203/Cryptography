@@ -1,15 +1,21 @@
-﻿FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
-WORKDIR /app
+﻿# ===== Build stage =====
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+WORKDIR /src
 
+# copy toàn bộ source
 COPY . .
 
-RUN dotnet publish QLGPLX/QLGPLX/Backend.csproj -c Release -o out
+# restore + publish
+RUN dotnet restore Cryptography.csproj
+RUN dotnet publish Cryptography.csproj -c Release -o /app/publish
 
+# ===== Runtime stage =====
 FROM mcr.microsoft.com/dotnet/aspnet:8.0
 WORKDIR /app
 
-ENV ASPNETCORE_URLS=http://+:8080
+# Railway inject PORT -> phải dùng biến này
+ENV ASPNETCORE_URLS=http://+:${PORT}
 
-COPY --from=build /app/out .
+COPY --from=build /app/publish .
 
-ENTRYPOINT ["dotnet", "Backend.dll"]
+ENTRYPOINT ["dotnet", "Cryptography.dll"]
